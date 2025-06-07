@@ -1,0 +1,22 @@
+[project]
+name = "fujielab-asr-parallel-cbs"
+version = "0.0.1"
+description = "Parallel CBS Transformer Based ASR"
+readme = "README.md"
+requires-python = ">=3.11, <3.12"
+authors = [
+    {name = "Shinya Fujie", email = "shinya.fujie@p.chibakoudai.jp"}]
+license = {file = "LICENSE"}
+dependencies = [
+    "espnet==202301",
+    "espnet_model_zoo",
+    "torchaudio",
+    "typeguard==2.13.3",
+]
+
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["examples"]
