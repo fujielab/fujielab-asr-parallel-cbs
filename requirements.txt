@@ -1,0 +1,5 @@
+# Core dependencies for fujielab-asr-parallel-cbs
+espnet==202301
+espnet_model_zoo
+torchaudio
+typeguard==2.13.3

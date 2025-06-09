@@ -6,8 +6,14 @@ Parallel CBS Transformer based ASR system built on ESPnet
 fujielab-asr-parallel-cbs is an automatic speech recognition (ASR) system based on ESPnet, featuring a parallelizable Contextual Block Streaming (CBS) Transformer.
 
 ## Features
-- Implementation of a parallel CBS Transformer Encoder extending the ESPnet framework
+- Implementation of a parallel CBS Transformer encoder extending the ESPnet framework
 - Supports online and streaming ASR inference
+- Pretrained models available via [Hugging Face](https://huggingface.co/)
+- Example script for chunk-by-chunk streaming recognition
+
+## Requirements
+- Python 3.11
+- `torch`, `torchaudio`, and other packages listed in `requirements.txt`
 
 ## Installation
 
@@ -18,8 +24,9 @@ pip install fujielab-asr-parallel-cbs
 ```
 
 ### Local Installation
-1. Install the required Python packages:
+1. Install the dependencies:
    ```bash
+   pip install -r requirements.txt
    pip install -e .
    ```
 2. If there are additional dependencies, please refer to `pyproject.toml`.
@@ -32,8 +39,9 @@ You can perform inference from an audio file using `examples/run_streaming_asr.p
 python examples/run_streaming_asr.py
 ```
 
-It will automatically download the pre-trained model from Hugging Face Hub
-and sample audio files from CSJ (Corpus of Spontaneous Japanese) official site.
+The script streams the input audio in 100&nbsp;ms chunks and prints partial results.
+At the first run it downloads a small example audio (`aps-smp.mp3`) from the CSJ
+corpus and a pretrained model from Hugging Face.
 
 
 ## Directory Structure
