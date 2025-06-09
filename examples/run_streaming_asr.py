@@ -1,7 +1,7 @@
 
 import soundfile as sf
 import numpy as np
-from espnet_ext.espnet2.bin.asr_parallel_transducer_inference import Speech2Text
+from fujielab.asr_parallel_cbs.espnet_ext.espnet2.bin.asr_parallel_transducer_inference import Speech2Text
 from scipy.signal import resample
 from os import path
 

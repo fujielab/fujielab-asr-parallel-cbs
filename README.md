@@ -37,7 +37,7 @@ and sample audio files from CSJ (Corpus of Spontaneous Japanese) official site.
 
 
 ## Directory Structure
-- `espnet_ext/` : ESPnet extension implementation
+- `fujielab/asr_parallel_cbs/espnet_ext/` : ESPnet extension implementation
   - `espnet/` : Extensions for ESPnet1
   - `espnet2/` : Extensions for ESPnet2 (ASR, transducer, joint network, etc.)
 - `examples/` : Sample audio and inference scripts
