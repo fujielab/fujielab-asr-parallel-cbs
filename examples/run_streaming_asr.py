@@ -18,9 +18,9 @@ s2t = Speech2Text.from_pretrained(
 
 if not path.exists("aps-smp.mp3"):
     # Download a sample audio file
-    # from https://clrd.ninjal.ac.jp/csj/sound-f/sps-smp.mp3
+    # from https://clrd.ninjal.ac.jp/csj/sound-f/aps-smp.mp3
     import requests
-    url = "https://clrd.ninjal.ac.jp/csj/sound-f/sps-smp.mp3"
+    url = "https://clrd.ninjal.ac.jp/csj/sound-f/aps-smp.mp3"
     response = requests.get(url)
     with open("aps-smp.mp3", "wb") as f:
         f.write(response.content)
