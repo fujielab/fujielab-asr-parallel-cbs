@@ -17,7 +17,7 @@ import torch
 from packaging.version import parse as V
 from typeguard import check_argument_types, check_return_type
 
-from ..espnet.nets.beam_search_parallel_transducer_online import (
+from ...espnet.nets.beam_search_parallel_transducer_online import (
     BeamSearchParallelTransducer,
     Hypothesis,
 )
