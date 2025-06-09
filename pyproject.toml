@@ -1,6 +1,6 @@
 [project]
 name = "fujielab-asr-parallel-cbs"
-version = "0.0.1"
+version = "0.1.0"
 description = "Parallel CBS Transformer Based ASR"
 readme = "README.md"
 requires-python = ">=3.11, <3.12"
@@ -13,6 +13,9 @@ dependencies = [
     "torchaudio",
     "typeguard==2.13.3",
 ]
+
+[project.urls]
+Homepage = "https://github.com/fujielab/fujielab-asr-parallel-cbs"
 
 [build-system]
 requires = ["setuptools", "setuptools_scm"]

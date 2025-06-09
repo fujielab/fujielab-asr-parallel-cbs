@@ -24,11 +24,14 @@ pip install fujielab-asr-parallel-cbs
 ```
 
 ### Local Installation
-1. Install the dependencies:
+1. Install the dependencies and this package:
    ```bash
    pip install -r requirements.txt
    pip install -e .
    ```
+   If you skip installing the package, running the examples may fail with
+   `ModuleNotFoundError`. Alternatively, you can set `PYTHONPATH=$(pwd)` before
+   executing the scripts.
 2. If there are additional dependencies, please refer to `pyproject.toml`.
 
 ## Usage
@@ -39,9 +42,11 @@ You can perform inference from an audio file using `examples/run_streaming_asr.p
 python examples/run_streaming_asr.py
 ```
 
-The script streams the input audio in 100&nbsp;ms chunks and prints partial results.
-At the first run it downloads a small example audio (`aps-smp.mp3`) from the CSJ
-corpus and a pretrained model from Hugging Face.
+The script streams the input audio in 100&nbsp;ms chunks and prints partial
+results. At the first run it downloads a small example audio (`aps-smp.mp3`)
+from the CSJ corpus and a pretrained model from Hugging Face. When the
+recognition finishes successfully, the final transcript is displayed at the end
+of the log.
 
 
 ## Directory Structure
