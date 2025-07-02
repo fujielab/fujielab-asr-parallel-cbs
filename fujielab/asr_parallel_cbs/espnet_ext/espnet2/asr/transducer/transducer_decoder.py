@@ -269,7 +269,7 @@ class TransducerDecoder(AbsDecoder):
             dec_out: Decoder output sequences. (B, D_dec)
             states: Decoder hidden states. ((N, B, D_dec), (N, B, D_dec) or None)
         """
-        labels = torch.LongTensor([[h.yseq[-1]] for h in hyps], device=self.device)
+        labels = torch.LongTensor([[h.yseq[-1]] for h in hyps]).to(device=self.device)
         dec_embed = self.embed(labels)
 
         states = self.create_batch_states([h.dec_state for h in hyps])
